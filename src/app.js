@@ -35,6 +35,12 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
@@ -67,14 +73,7 @@ function convertToCelsius(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = 19;
 }
-function displayTemperature(response) {
-  let iconElement = document.querySelector("#icon#");
-
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/04d@2x.png`
-  );
-}
+function displayIcone(response) {}
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();

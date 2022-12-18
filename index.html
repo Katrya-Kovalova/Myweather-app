@@ -34,34 +34,27 @@
               <input
                 type="submit"
                 value="Search"
-                class="form-control btn btn-primary shadow-sm w-100"
+                class="form-control btn btn-primary shadow-sm w-200"
               />
-            </div>
-            <div class="col-3">
-              <button
-                class="btn btn-success w-100"
-                id="current-location-button"
-              >
-                Current
-              </button>
             </div>
           </div>
         </form>
         <h1 id="city">Kyiv</h1>
         <ul>
-          <li id="date"></li>
+          <li>Last updated: <span id="date"> </span></li>
           <li id="description"></li>
         </ul>
         <div class="row">
           <div class="col-6">
             <div class="clearfix">
               <div class="float-left">
+                <img
+                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                  alt="cloudy"
+                  id="icon"
+                />
                 <span class="temperature" id="temperature"></span>
                 <span class="units">°C</span>
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-                  alt="cloudy"
-                />
               </div>
             </div>
           </div>
@@ -71,18 +64,19 @@
               <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
-          <small>
-            <a
-              href="https://github.com/Katrya-Kovalova/Myweather-app"
-              target="_blank"
-            >
-              Open-source code
-            </a>
-            by Katya Kovalova
-          </small>
         </div>
       </div>
+      <small>
+        <a
+          href="https://github.com/Katrya-Kovalova/Myweather-app"
+          target="_blank"
+        >
+          Open-source code
+        </a>
+        by Katya Kovalova
+      </small>
     </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>

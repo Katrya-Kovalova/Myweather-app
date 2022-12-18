@@ -46,6 +46,9 @@ body {
 .small {
   padding-right: 15px;
 }
+.description {
+  text-transform: capitalize;
+}
 
 h1 {
   font-weight: 400;

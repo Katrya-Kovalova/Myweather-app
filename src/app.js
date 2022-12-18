@@ -62,7 +62,7 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-function displayConvertToFahrenheit(event) {
+function showConvertToFahrenheit(event) {
   event.preventDefault();
   let convertToFahrenheit = (temperatureElement.innerHTML * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
@@ -77,6 +77,6 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 let faherenheitLink = document.querySelector("faherenheit-link");
-faherenheitLink.addEventListener("click", displayConvertToFahrenheit);
+faherenheitLink.addEventListener("click", showConvertToFahrenheit);
 
 searchCity("Kyiv");

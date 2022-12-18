@@ -62,18 +62,12 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-function convertToFahrenheit(event) {
+function displayConvertToFahrenheit(event) {
   event.preventDefault();
+  let convertToFahrenheit = (temperatureElement.innerHTML * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  temperatureElement.innerHTML = Math.round(convertToFahrenheit);
 }
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
-function displayIcone(response) {}
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
@@ -81,5 +75,8 @@ dateElement.innerHTML = formatDate(currentTime);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let faherenheitLink = document.querySelector("faherenheit-link");
+faherenheitLink.addEventListener("click", displayConvertToFahrenheit);
 
 searchCity("Kyiv");
